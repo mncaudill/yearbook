@@ -1,0 +1,108 @@
+\documentclass[11pt,letter]{book}
+\usepackage{amssymb,amsmath}
+\usepackage{ifxetex,ifluatex}
+\usepackage{layout}
+\usepackage{multicol}
+\usepackage[hyphens]{url}
+
+\usepackage{geometry}
+\usepackage{wrapfig}
+\usepackage{fullpage}
+%\geometry{bindingoffset=1cm}
+
+\ifxetex
+  \usepackage{fontspec,xltxtra,xunicode}
+  \defaultfontfeatures{Mapping=tex-text,Scale=MatchLowercase}
+\else
+  \ifluatex
+    \usepackage{fontspec}
+    \defaultfontfeatures{Mapping=tex-text,Scale=MatchLowercase}
+  \else
+    \usepackage[utf8]{inputenc}
+    \usepackage[T1]{fontenc}
+
+    %\usepackage[urw-garamond]{mathdesign}
+    \usepackage{tgpagella}
+
+    %\usepackage[sc]{mathpazo}
+    %\linespread{1.05}         % Palatino needs more leading (space between lines)
+
+  \fi
+\fi
+\usepackage{graphicx}
+\usepackage{float}
+% We will generate all images so they have a width \maxwidth. This means
+% that they will get their normal width if they fit onto the page, but
+% are scaled down if they would overflow the margins.
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt plus 2pt minus 1pt}
+\setlength{\emergencystretch}{3em}  % prevent overfull lines
+\setcounter{secnumdepth}{0}
+\setcounter{tocdepth}{1}
+\graphicspath{{./}{images/}}
+
+\usepackage[unicode=true,breaklinks]{hyperref}
+\hypersetup{breaklinks=true, pdfborder={0 0 0}}
+
+\setlength{\marginparwidth}{0pt}
+\setlength{\marginparsep}{0pt}
+
+%\renewcommand{\contentsname}{parts}
+
+\title{Yearbook: 2011}
+\author{Nolan Caudill\\San Francisco, California}
+\date{}
+
+\begin{document}
+
+\maketitle
+\tableofcontents
+
+%\frontmatter
+%\include{introduction}
+
+\mainmatter
+\part{A Year in Long Thoughts}
+
+\include{2011-01-01-how-to-build-a-quine-index}
+\include{2011-06-14-choose-your-medium-carefully-index}
+\include{2011-06-25-days-philip-larkin-index}
+\include{2011-06-26-shutters-apertures-index}
+\include{2011-07-03-my-jekyll-setup-index}
+\include{2011-10-17-the-fear-index}
+\include{2011-10-21-instagram-on-flickr-index}
+\include{2011-10-23-radiators-and-complexity-index}
+\include{2011-10-25-new-rule-rss-index}
+\include{2011-10-25-date-night-index}
+\include{2011-10-26-morning-ritual-index}
+\include{2011-10-30-things-around-my-house-index}
+\include{2011-10-30-sunday-story-index}
+\include{2011-10-31-man-and-the-myth-index}
+%\include{2011-11-04-flickrhq-index}
+\include{2011-11-05-bank-transfer-day-index}
+\include{2011-11-06-happy-places-index}
+\include{2011-11-06-sunday-story-index}
+\include{2011-11-09-house-guest-coming-index}
+\include{2011-11-12-fewer-features-is-a-feature-index}
+\include{2011-11-13-sunday-story-index}
+\include{2011-11-16-wine-trip-photos-index}
+\include{2011-11-20-sunday-story-index}
+\include{2011-11-24-slow-backup-index}
+\include{2011-11-24-giving-thanks-index}
+\include{2011-11-28-type-index}
+\include{2011-11-29-concrete-words-index}
+\include{2011-12-09-thats-a-wrap-index}
+\include{2011-12-11-sunday-index}
+\include{2011-12-26-dipstick-index}
+
+\part{A Year in Short Bursts}
+
+\include{twitter/twitter}
+
+\part{A Year in Pictures}
+
+%\include{flickr/flickr}
+\input{flickr/justified}
+
+
+\end{document}
