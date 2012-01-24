@@ -54,7 +54,7 @@ The `flickr/justified.php` file is what creates these image files and then the `
 
 I used Aaron Cope's [parallel-flickr](http://straup.github.com/parallel-flickr/) as the source of the images. This project conveniently creates an easy-to-query database so I could do something like "give me all the images from Jan 1, 2011, to Dec 31, 2011 ordered by date_taken ascending". I used the output of this query to select the appropriate images in the correct order and rsynced them to my book's Flickr directory.
 
-There are a few fuzzy parameters that let you things like a maximum row height, and how wide your rows are. Feel free to twiddle these knobs as you see fit.
+There are a few fuzzy parameters that lets you set things like a maximum row height, and how wide your rows are. Feel free to twiddle these knobs as you see fit.
 
 ## Conclusion
 
