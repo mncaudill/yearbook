@@ -11,7 +11,6 @@
     $curr_day = '';
     $new_tz = $curr_tz;
 
-
     $count = 0;
     while ($line = fgets($file)) {
         // This is a hack to work around serializing something (having real newlines), storing it in mysql, then dumping it to a text file,

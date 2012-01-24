@@ -199,7 +199,7 @@
         }
 
         imagefilter($canvas, IMG_FILTER_GRAYSCALE);
-        imagejpeg($canvas, "$output_dir/page_$page_count.jpg", 90);
+        imagejpeg($canvas, "$output_dir/page_$page_count.jpg", 100);
         imagedestroy($canvas);
         fwrite($tex_file, "\includegraphics[width=\\textwidth]{flickr/pages/page_$page_count.jpg}\n");
     }
