@@ -40,8 +40,26 @@ There are some positively Nolan-specific things in here. All the dates in Tweetn
 
 Another sort of fuzzy, human thing I added to this that you may want to be aware of is that I fudged the edges of what constituted a "day". Instead of a cold, midnight to midnight, I group tweets on a 4am boundary. Best I could tell, I never tweeted before 4am after waking up, and never tweeted past 4am by staying up from the night before. This way a day is defined as waking up to going asleep (or passing out, some nights).
 
+This script also runs follows some common URL shorteners so you won't see any bit.ly or goo.gl links in your permanent archive.
+
 The hard part of getting the Twitter section together is actually getting the tweets together, but once you do that, it's a breeze.
 
 ## Flickr
 
-I uploaded about 600 pictures to Flickr this year. 
+I uploaded about 600 pictures to Flickr this year. I really wanted to display every single picture for the sake of completeness but figuring out a way to that visually was difficult.
+
+I ended up going something like [Google's image search](http://images.google.com/search?q=kitten&hl=en&site=webhp&tbm=isch). Stephen Woods was also a major source of inspiration for the layout.
+
+This layout lets you plop a lot of images on a page and letting them use their natural dimensions to shoulder out more space as needed.
+
+Instead of forcing tex to layout individual images, or individual rows, I figured it would be easier to create an image that represented the full page and then put that on the page, not unlike the old days of people adding `<area>` tags to full-page images in the early days of the web.
+
+The `flickr/justified.php` file is what creates these files. At the top is a parameters that you change to point to a plain text file listing of files that you want to layout.
+
+I used Aaron Cope's [parallel-flickr](http://straup.github.com/parallel-flickr/) as the source of the images. This project conveniently creates an easy-to-query database so I could do something like "give me all the images from Jan 1, 2011, to Dec 31, 2011 ordered by date_taken ascending". I used the output of this query to select the appropriate images in the correct order and rsynced them to my book's Flickr directory.
+
+There are a few fuzzy parameters that let you things like a maximum row height, and how wide your rows are. Feel free to twiddle these knobs as you see fit.
+
+## Conclusion
+
+Nothing about this is drop-in-and-run but there are a lot of gotchas that I came across that might help someone else if they ever decide to tackle a project like this.
